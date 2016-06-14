@@ -1,0 +1,15 @@
+.text-white-contacto:hover {
+  color: #feb41c;
+}
+
+.text-white-contacto {
+  color: #fff;
+}
+
+.lead {
+  text-align: justify;
+}
+
+.nav-menu {
+  font-size: 40px;
+}
