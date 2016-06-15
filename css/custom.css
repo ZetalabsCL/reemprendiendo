@@ -1,3 +1,5 @@
+
+
 .text-white-contacto:hover {
   color: #feb41c;
 }
@@ -12,4 +14,20 @@
 
 .nav-menu {
   font-size: 40px;
+}
+
+/*
+TODO: Unificar estos estilos y ordenar todo
+*/
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.bg-secondary-1 {
+    background-color: #464646 !important;
+}
+
+.overlay:before {
+    background-color: #7A1A12;
 }
