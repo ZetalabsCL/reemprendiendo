@@ -1,6 +1,6 @@
 <?php
  
-if(isset($_POST['email'])) {
+if(isset($_POST['mail'])) {
 	// Require the Swift Mailer library
 	require_once 'lib/swift_required.php';
 
@@ -22,12 +22,12 @@ if(isset($_POST['email'])) {
 	// $transport = Swift_SmtpTransport::newInstance('mail.mediumra.re', 25)
 	
 	// or if you prefer/need to fall back to use PHP's inbuilt mail() function:
-	// $transport = Swift_MailTransport::newInstance();
+	$transport = Swift_MailTransport::newInstance();
 	
-	$transport = Swift_SmtpTransport::newInstance('mail.yourdomain.com', 25, 'tls' )
-	  ->setUsername('email@domain.com')     
-	  ->setPassword('p@55w0rd')
-	  ;
+	//$transport = Swift_SmtpTransport::newInstance('mail.reemprendiendo.cl', 25, '' )
+	 // ->setUsername('contacto@reemprendiendo.cl')
+	  //->setPassword('ContactoREEM2016')
+	  //;
 
 	
 	$mailer = Swift_Mailer::newInstance($transport);
@@ -42,9 +42,9 @@ if(isset($_POST['email'])) {
 	
 	
 	// You can change "A message from Pivot Template Form" to your own subject if you want.
-	$message = Swift_Message::newInstance('A message from Pivot Template Form')
-	  ->setFrom(array($_POST['email'] => $_POST['name']))
-	  ->setTo(array('email@yourdomain.com' => 'John Doe'))->setBody($messageText);
+	$message = Swift_Message::newInstance('Nueva solicitud de contacto desde la web de Reemprendiendo.cl')
+	  ->setFrom(array($_POST['mail'] => $_POST['nombre']))
+	  ->setTo(array('contacto@reemprendiendo.cl' => 'Contacto Reemprendiendo'))->setBody($messageText);
 //                           ^                    ^
 //       Your email address_/          Your name_/
 
