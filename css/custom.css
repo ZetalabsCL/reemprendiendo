@@ -35,3 +35,13 @@ p {
 .text-primary2 {
     color: #000000;
 }
+
+.enfasis {
+    font-size: xx-large;
+    color: #feb41c;
+}
+
+.bajada-sub {
+    font-size: x-large;
+    color: #feb41c;
+}
